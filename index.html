@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <body>
+  <meta charset="UTF-8" />
+  <title>Desafio das Fotos</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
   <div class="container">
     <h2 class="titulo">Desafio das Fotos Lari e Caio – 22/06/25</h2>
     <h1 id="frase"></h1>
@@ -9,10 +13,28 @@
       envie sua foto aqui
     </a>
   </div>
+
+  <script>
+    const frases = [
+      "Capture um abraço inesperado.",
+      "Foto com alguém usando algo terracota.",
+      "Momento espontâneo na pista de dança.",
+      "Um brinde cheio de alegria!",
+      "A noiva de costas (vale correr!).",
+      "O convidado mais animado da festa.",
+      "Algo verde que não seja planta!"
+    ];
+
+    const fraseElemento = document.getElementById('frase');
+    let fraseSalva = localStorage.getItem('fraseEscolhida');
+
+    if (!fraseSalva) {
+      const indiceAleatorio = Math.floor(Math.random() * frases.length);
+      fraseSalva = frases[indiceAleatorio];
+      localStorage.setItem('fraseEscolhida', fraseSalva);
+    }
+
+    fraseElemento.innerText = fraseSalva;
+  </script>
 </body>
-  <meta charset="UTF-8" />
-  <title>Frase Aleatória</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
 </html>
