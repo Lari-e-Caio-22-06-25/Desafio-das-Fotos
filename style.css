@@ -1,15 +1,46 @@
-.botao-envio {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 12px 24px;
-  background-color: #007bff;
-  color: white;
-  text-decoration: none;
+body {
+  background-color: #f8f4f0; /* tom claro neutro pra suavizar o fundo */
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  max-width: 600px;
+  padding: 20px;
+  border-radius: 12px;
+  background-color: #fff8f5; /* leve tom terracota pastel */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.titulo {
+  font-size: 28px;
   font-weight: bold;
+  color: #914d2c; /* terracota mais profunda */
+  margin-bottom: 30px;
+}
+
+#frase {
+  font-size: 22px;
+  color: #3c4b36; /* verde oliva escuro */
+  margin-bottom: 20px;
+}
+
+.botao-envio {
+  background-color: #6b8e23; /* verde oliva médio */
+  color: white;
+  padding: 12px 24px;
+  text-decoration: none;
   border-radius: 8px;
+  font-weight: bold;
   transition: background-color 0.3s ease;
 }
 
 .botao-envio:hover {
-  background-color: #0056b3;
+  background-color: #5c7a1e;
 }
